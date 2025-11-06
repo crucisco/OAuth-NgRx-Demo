@@ -3,6 +3,7 @@ import { App } from "./app";
 import { provideZonelessChangeDetection } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { WindowsService } from "./services/windows.service";
+import { provideMockStore } from "@ngrx/store/testing";
 
 describe('AppComponent', () => {
   let fixture: ComponentFixture<App>;
@@ -14,6 +15,7 @@ describe('AppComponent', () => {
         provideZonelessChangeDetection(),
         { provide: ActivatedRoute, useValue: { snapshot: { data: {} } } },
         WindowsService,
+        provideMockStore(),
         { provide: ComponentFixtureAutoDetect, useValue: true },
       ],
       imports: [App]
