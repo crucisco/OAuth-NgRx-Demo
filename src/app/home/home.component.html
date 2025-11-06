@@ -1,0 +1,6 @@
+<h2>Home</h2>
+@if(isAuthenticated$ | async) {
+  <p>Welcome back, {{ (authenticatedAccount$ | async)?.name }}! 🎉</p>
+} @else {
+  <p>Welcome to the demo app! Please <a id="loginLink" href="#" (click)="logIn()">log in</a> to continue.</p>
+}

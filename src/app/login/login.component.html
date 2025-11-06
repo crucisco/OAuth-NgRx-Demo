@@ -1,0 +1,16 @@
+<div class="auth-buttons">
+  @if (isAuthenticated$ | async) {
+  <button id="logout" name="logout" class="pill" (click)="logOut()">
+    <span [title]="(authenticatedAccount$ | async)?.name">Log out</span>
+  </button>
+  <a class="pill" [routerLink]="['profile']">
+    <span>Profile</span>
+  </a>
+  } @else {
+  <button id="login" name="login" class="pill" (click)="logIn()">
+    <span>Log in</span>
+  </button>
+  }
+
+
+</div>
