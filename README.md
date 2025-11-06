@@ -20,11 +20,11 @@ npm install
 
 ## Running the demo
 
-Open `environments.dev.ts` and replace 'ENTER_CLIENT_ID' and 'ENTER_TENANT_ID' with the appropriate values obtained from your Azure App Registration.
+Open `environment.dev.ts` and replace 'YOUR CLIENT ID HERE' and 'TENANT ID HERE' with the appropriate values obtained from your Azure App Registration.
 
 You do not have to do this in order to run the unit tests, but it is necessary if you want to run the web app.
 
-You can also change the authentication behaviour using the `usePopupAuthentication` flag in `environments`: setting it to _true_ will mean the login and logout dialogues will open in a popup window.  Leaving it as _false_ will use redirection for login and logout.
+You can also change the authentication behaviour using the `usePopupAuthentication` flag in `environment`: setting it to _true_ will mean the login and logout dialogues will open in a popup window.  Leaving it as _false_ will use redirection for login and logout.
 
 ### Development server
 
